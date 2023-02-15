@@ -12,6 +12,8 @@ Window{
     width: 1280
     height: 720
 
+    
+
 
     Material.theme: Material.Light
     Material.accent: Material.Lightblue
