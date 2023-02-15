@@ -1,5 +1,6 @@
 import QtQuick 
 import QtQuick.Layouts
+import "custom_widgets"
 
 
 Rectangle {
@@ -7,8 +8,8 @@ Rectangle {
     color: "#032541"
 
     
-    property int font_size: 20
-    property color text_color: "white"
+    //property int font_size: 20
+    //property color text_color: "white"
     
 
     RowLayout{
@@ -22,31 +23,13 @@ Rectangle {
         id: logo
         source: Resources.get("logo.svg")
         }
+
+        TextButton{text:"Movies"}
+        TextButton{text:"TV Shows"}
+        TextButton{text:"People"}
+        TextButton{text:"More"}
     
-        Text{
-        text: "Movies"
-        font.bold: true
-        font.pixelSize: root.font_size
-        color : root.text_color
-        }
-        Text{
-        text: "TV Shows"
-        font.bold: true
-        font.pixelSize: root.font_size
-        color : root.text_color
-        }
-        Text{
-        text: "People"
-        font.bold: true
-        font.pixelSize: root.font_size
-        color : root.text_color
-        }
-        Text{
-        text: "More"
-        font.bold: true
-        font.pixelSize: root.font_size
-        color : root.text_color
-        }  
+      
          Item{
             Layout.fillWidth: true  
         } 
