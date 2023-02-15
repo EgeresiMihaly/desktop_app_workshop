@@ -3,7 +3,13 @@ import QtQuick.Layouts
 
 
 Rectangle {
+    id: root
     color: "#032541"
+
+    
+    property int font_size: 20
+    property color text_color: "white"
+    
 
     RowLayout{
         
@@ -20,26 +26,26 @@ Rectangle {
         Text{
         text: "Movies"
         font.bold: true
-        font.pixelSize: 18
-        color : "white"
+        font.pixelSize: root.font_size
+        color : root.text_color
         }
         Text{
         text: "TV Shows"
         font.bold: true
-        font.pixelSize: 18
-        color : "white"
+        font.pixelSize: root.font_size
+        color : root.text_color
         }
         Text{
         text: "People"
         font.bold: true
-        font.pixelSize: 18
-        color : "white"
+        font.pixelSize: root.font_size
+        color : root.text_color
         }
         Text{
         text: "More"
         font.bold: true
-        font.pixelSize: 18
-        color : "white"
+        font.pixelSize: root.font_size
+        color : root.text_color
         }  
          Item{
             Layout.fillWidth: true  
