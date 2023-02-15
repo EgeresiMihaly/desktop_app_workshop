@@ -1,9 +1,11 @@
 import os, sys
 from PySide6.QtGui import QGuiApplication
 from PySide6.QtQml import QQmlApplicationEngine
+from PySide6.QtQuickControls2 import QQuickStyle
 
 APP_ROOT = os.path.dirname(__file__)
 MAIN_QML = os.path.join(APP_ROOT, "main.qml")
+QQuickStyle.setStyle("Material")
 
 class TMDB:
     def __init__(self):
