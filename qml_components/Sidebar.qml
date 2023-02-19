@@ -4,7 +4,7 @@ import QtQuick.Layouts
 
 import "custom_widgets"
 
-
+///gesw
 Item{
     ColumnLayout{
         anchors.fill: parent
