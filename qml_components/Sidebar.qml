@@ -9,8 +9,16 @@ Item{
     ColumnLayout{
         anchors.fill: parent
         anchors.leftMargin: 5
-        
+        // Search by title
         IconTextField{id: search_by_title; placeholder_text: "Search by title"; icon: Resources.get("search.svg")}
+
+
+        // Soring
+
+        Rectangle{
+            
+        }
+
 
         // spacer
         Item{
