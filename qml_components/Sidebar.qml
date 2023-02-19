@@ -17,6 +17,10 @@ Item{
       CustomRectangle{  
         Layout.fillWidth: true
         implicitHeight: 100
+
+        Text{
+            text:"Sort Result by:"
+        }
         
       }
 
