@@ -4,7 +4,6 @@ import QtQuick.Layouts
 
 import "custom_widgets"
 
-///gesw
 Item{
     ColumnLayout{
         anchors.fill: parent
@@ -13,11 +12,6 @@ Item{
         IconTextField{id: search_by_title; placeholder_text: "Search by title"; icon: Resources.get("search.svg")}
 
 
-        // Soring
-
-        Rectangle{
-            
-        }
 
 
         // spacer
