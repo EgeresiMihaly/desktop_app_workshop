@@ -9,8 +9,8 @@ Rectangle {
     Layout.fillWidth: true
     implicitHeight: 55
 
-    property string placeholder_text: ""
-    property var icon: ""
+    property string placeholder_text
+    property var icon
 
     RowLayout{
         anchors.fill: parent
