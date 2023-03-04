@@ -1,10 +1,10 @@
 import QtQuick 2.15
-
+import "custom_widgets"
 
 Rectangle {
     
 
-    Text{
+    TitleText{
         text: "Movie List View"
         
 }

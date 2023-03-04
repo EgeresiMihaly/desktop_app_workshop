@@ -19,5 +19,9 @@ Text{
         onClicked: print("Clicked:", parent.text)
         
 
+
+
+        
+
     }
 }
