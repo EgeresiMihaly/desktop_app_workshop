@@ -24,10 +24,10 @@ Rectangle {
         source: Resources.get("logo.svg")
         }
 
-        TextButton{text:"Movies"}
-        TextButton{text:"TV Shows"}
-        TextButton{text:"People"}
-        TextButton{text:"More"}
+        TextButton{text:"Movies"; bold_font: true; font_size: 26}
+        TextButton{text:"TV Shows"; bold_font: true; font_size: 26}
+        TextButton{text:"People"; bold_font: true; font_size: 26}
+        TextButton{text:"More"; bold_font: true; font_size: 26}
     
       
          Item{

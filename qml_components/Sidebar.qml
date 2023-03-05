@@ -4,6 +4,7 @@ import QtQuick.Layouts
 
 import "custom_widgets"
 
+
 Item{
     ColumnLayout{
         anchors.fill: parent
@@ -45,17 +46,29 @@ Item{
       }
 
       ///Genre filter
-      CustomRectangle{ 
-        Layout.fillWidth: true
-        implicitHeight: 100
+      CustomRectangle{
+   
+        Layout.fillWidth: true 
+        implicitHeight: childrenRect.height + 20
+
 
         ColumnLayout{
-          anchors.fill: parent
+          anchors.left: parent.left
+          anchors.right: parent.right
+          anchors.top: parent.top
           anchors.margins: 10
+          
 
           SubTitleText{
             text: "Genre"
-          } 
+          }
+          Repeater{
+            model: ["Action","Advanture", "Animation", "Comedy", "Crime", "Documentary", "Family"]
+            TextButton{text: modelData; default_color:"black"; highlight_color:"gray"}
+          }
+                
+
+        
         }
 
       }
