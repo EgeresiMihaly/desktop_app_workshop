@@ -1,5 +1,6 @@
 import QtQuick
-import QtQuick.Layouts 
+import QtQuick.Layouts
+ 
  
 CustomRectangle{
     id: root
@@ -7,7 +8,7 @@ CustomRectangle{
     
     property string movie_title:"Prey" 
     property string movie_date: "02 Aug 2022"
-    property int movie_rating
+    property int movie_rating: 50
     property string movie_id
     property var movie_poster
 
@@ -16,10 +17,26 @@ CustomRectangle{
         spacing: 0
 
         // poster
-        Image{
-            source: Resources.get("poster.jpg")
-            sourceSize: Qt.size(root.width, 262)
+        Item{
+            id: poster_container
+            Layout.fillWidth: true
+            implicitHeight: 262
+            
+            Image{
+                id: poster
+                source: Resources.get("poster.jpg")
+                sourceSize: Qt.size(poster_container.width, poster_container.height)
+            }
+            PopularityProgress{
+                anchors.bottom: poster.bottom
+                x: 5
+                anchors.bottomMargin: -10
+
+            }
         }
+
+
+       
 
         //Rating
 
@@ -32,7 +49,12 @@ CustomRectangle{
                 anchors.fill: parent
                 anchors.margins: 10
                   // Movie Title
-                SubTitleText{text:movie_title}
+                SubTitleText{
+                    text:movie_title
+                    font.pixelSize: 14
+                    wrapMode: Text.WrapAtWordBoundaryOrAnywhere
+                    Layout.fillWidth: true
+                }
 
                 Item{
                     Layout.fillHeight: true
