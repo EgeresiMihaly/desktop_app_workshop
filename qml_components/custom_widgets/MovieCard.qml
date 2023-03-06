@@ -29,7 +29,7 @@ CustomRectangle{
             }
             PopularityProgress{
                 anchors.bottom: poster.bottom
-                x: 5
+                x: 10
                 anchors.bottomMargin: -10
 
             }
