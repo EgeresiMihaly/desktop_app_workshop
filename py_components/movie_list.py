@@ -8,6 +8,7 @@ class MovieList(QAbstractListModel):
         super().__init__()
         self._movies = []
 
+
     def rowCount(self, parent= QModelIndex) -> int:
         return len(self._moves)
     
