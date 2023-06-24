@@ -8,7 +8,7 @@ CustomRectangle{
     
     property string movie_title:"Prey" 
     property string movie_date: "02 Aug 2022"
-    property int movie_rating: 50
+    property int movie_rating: 0
     property string movie_id
     property var movie_poster
 
@@ -31,6 +31,8 @@ CustomRectangle{
                 anchors.bottom: poster.bottom
                 x: 10
                 anchors.bottomMargin: -10
+
+               
 
             }
         }

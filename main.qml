@@ -36,7 +36,7 @@ Window{
                 implicitWidth: 260
                 
             }
-             MovieListView{
+            MovieListView{
                 
                 Layout.fillWidth: true
                 Layout.fillHeight: true

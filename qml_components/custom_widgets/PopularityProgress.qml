@@ -1,17 +1,18 @@
-import QtQuick
+import QtQuick 2.15
 
-
-Rectangle {
-    id:root
+Rectangle{
+    id: root
     implicitHeight: 50
     implicitWidth: implicitHeight
     color: "#141414"
     radius: width
 
-    property int percentage: 50
+    property int percentage: 55
+    
+    onParentChanged: mycanvas.requestPaint()
 
 
-    // pie Chart
+    // pie chart
     Canvas{
         id: mycanvas
         width: parent.width
@@ -19,22 +20,33 @@ Rectangle {
 
         onPaint: {
             var ctx = getContext("2d");
-            ctx.reset()
 
-            var radiant = root.percentage * 0,62831853071796
+            var radiant = root.percentage * 0.062831853071796
+            var centerX = width / 2
+            var centerY = height / 2
+            var radius = width / 2
+
+            ctx.reset()
+            ctx.beginPath();
+            ctx.fillStyle = root.percentage > 50 ? "lightgreen" : "yellow"
+
+            ctx.arc(centerX, centerY, radius, 0, radiant, false)
+            ctx.lineTo(centerX, centerY)
+            ctx.fill()
         }
 
-
-
+        rotation: -90
     }
-    // popularity
+
+    // popularity text
     Rectangle{
-        color: "gray"
-        width: root.width - 10
+        color: root.color
+        width: root.width -10
         height: width
         radius: width
         anchors.centerIn: parent
-        Item {
+
+        Item{
             width: childrenRect.width
             height: childrenRect.height
             anchors.centerIn: parent
@@ -46,6 +58,7 @@ Rectangle {
                 font.bold: true
                 font.pixelSize: 16
             }
+
             Text{
                 text: "%"
                 color: "white"
@@ -56,9 +69,5 @@ Rectangle {
             }
 
         }
-        
     }
-
-
-
 }
